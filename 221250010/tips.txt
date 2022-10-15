@@ -1,0 +1,54 @@
+//以下为项目的各种tips
+
+{{{最基本框架
+
+void update();
+int main(int argc,char *argv[])
+{
+    if(SDL_Init(SDL_INIT_VIDEO))
+    {
+        SDL_Log("Can not init video,%s",SDL_GetError);
+        return 1;
+    }
+
+    SDL_Window * win = SDL_CreateWindow("hill",
+                                    SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
+                                    WIDTH,HEIGHT,
+                                    SDL_WINDOW_SHOWN);
+    
+    SDL_Surface * screen=SDL_GetWindowSurface(win);
+
+    while(1)
+    {   
+        SDL_Event event;
+        if(SDL_PollEvent(&event))
+        {
+            if(event.type == SDL_QUIT)
+            {
+                break;
+            }
+        }
+
+        update();
+        SDL_UpdateWindowSurface(win);
+
+    }
+
+    SDL_DestroyWindow(win);
+    return 0;
+}
+
+}}}最基本框架
+
+**************************分割线*******************************************************
+
+
+{{{关于一些要用到的SDL2的API(具体的使用方法去看SDL库好了,里面很详细)
+
+SDL_FillRect//用来绘制矩形
+
+((uint32_t *)(SDL_Surface->pixels))[point] = color//用来绘制单个的像素点，color用16进制表示
+
+
+
+}}}关于一些要用到的SDL2的API
