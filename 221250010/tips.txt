@@ -1,17 +1,22 @@
 //以下为项目的各种tips
 
-{{{最基本框架
+********************分割线*********************************************************************************************
+
+{{{最基本框架(别直接抄，仔细看看各个代码的作用)
+
+
 
 void update();
 int main(int argc,char *argv[])
 {
+    //初始化
     if(SDL_Init(SDL_INIT_VIDEO))
     {
         SDL_Log("Can not init video,%s",SDL_GetError);
         return 1;
     }
 
-    SDL_Window * win = SDL_CreateWindow("hill",
+    SDL_Window * win = SDL_CreateWindow("name",
                                     SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
                                     WIDTH,HEIGHT,
                                     SDL_WINDOW_SHOWN);
@@ -35,19 +40,41 @@ int main(int argc,char *argv[])
     }
 
     SDL_DestroyWindow(win);
+    SDL_Quit();
     return 0;
 }
 
 }}}最基本框架
 
-**************************分割线*******************************************************
+**************************分割线********************************************************************************************************
 
 
 {{{关于一些要用到的SDL2的API(具体的使用方法去看SDL库好了,里面很详细)
 
-SDL_FillRect//用来绘制矩形
+SDL_Init()//初始化用的函数，参数为SDL_INIT_VIDEO等等，若成功初始化，返回0（因为一堆东西要初始化的话，可以用SDL_INIT_EVERYTHING）
+SDL_Quit()//注销SDL2
 
-((uint32_t *)(SDL_Surface->pixels))[point] = color//用来绘制单个的像素点，color用16进制表示
+SDL_CreateWindow("title",
+                x,y,//对应着窗口的位置，填入SDL_WINDOWPOS_CENTERED代表着它在中间
+                w,h,//代表宽度和高度
+                flags//对应窗口操作，填入0就是不操作，填入其它的SDL_WindowFlags对应其它操作
+                )
+SDL_DestroyWindow()//摧毁SDL_Window*的窗口
+
+SDL_PollEvent(&event)//如果事件队列中存在事件，函数返回1，并且在类型为SDL_Event的结构体event中存入事件
+SDL_Event 
+
+
+
+
+
+
+
+SDL_FillRect()//用来绘制矩形
+
+
+
+SDL_GetTicks()//获得一个整数，表示程序开始到调用函数的时间
 
 
 

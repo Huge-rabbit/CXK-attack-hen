@@ -2,7 +2,7 @@
  * @Author: Huge-rabbit 1372223484@qq.com
  * @Date: 2022-10-15 10:36:22
  * @LastEditors: Huge-rabbit 1372223484@qq.com
- * @LastEditTime: 2022-10-15 10:38:28
+ * @LastEditTime: 2022-10-16 16:05:04
  * @FilePath: \2022-cpl-coding-1d:\Teamwork\CXK-attack-hen\221250010\game.c
  * @Description: 
  * 
@@ -43,7 +43,7 @@ int main(int argc,char *argv[])
             {
                 break;
             }
-        }
+        }SDL_KEYDOWN
 
         update();
         SDL_UpdateWindowSurface(win);
@@ -51,5 +51,6 @@ int main(int argc,char *argv[])
     }
 
     SDL_DestroyWindow(win);
+    SDL_Quit();
     return 0;
 }
