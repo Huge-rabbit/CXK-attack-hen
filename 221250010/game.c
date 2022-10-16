@@ -2,17 +2,18 @@
  * @Author: Huge-rabbit 1372223484@qq.com
  * @Date: 2022-10-15 10:36:22
  * @LastEditors: Huge-rabbit 1372223484@qq.com
- * @LastEditTime: 2022-10-16 16:05:04
+ * @LastEditTime: 2022-10-16 19:45:52
  * @FilePath: \2022-cpl-coding-1d:\Teamwork\CXK-attack-hen\221250010\game.c
  * @Description: 
  * 
  * Copyright (c) 2022 by Huge-rabbit 1372223484@qq.com, All Rights Reserved. 
  */
 #include<SDL2/SDL.h>
+#include<SDL2/SDL_image.h>
 #include<stdio.h>
 
-#define HEIGHT 400
-#define WIDTH 400
+#define HEIGHT 600
+#define WIDTH 1000
 
 void update()
 {
@@ -27,12 +28,16 @@ int main(int argc,char *argv[])
         return 1;
     }
 
-    SDL_Window * win = SDL_CreateWindow("hill",
+    SDL_Window * win = SDL_CreateWindow("cxk",
                                     SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
                                     WIDTH,HEIGHT,
                                     SDL_WINDOW_SHOWN);
     
     SDL_Surface * screen=SDL_GetWindowSurface(win);
+    
+    SDL_Surface * img = IMG_Load("materials/image/background1.png");
+    SDL_Rect src = {0,0,img->w,img->h};
+    SDL_BlitSurface(img,&src,screen,&src);
 
     while(1)
     {   
@@ -43,13 +48,14 @@ int main(int argc,char *argv[])
             {
                 break;
             }
-        }SDL_KEYDOWN
+        }
 
         update();
         SDL_UpdateWindowSurface(win);
 
     }
 
+    SDL_FreeSurface(img);
     SDL_DestroyWindow(win);
     SDL_Quit();
     return 0;

@@ -62,20 +62,21 @@ SDL_CreateWindow("title",
 SDL_DestroyWindow()//摧毁SDL_Window*的窗口
 
 SDL_PollEvent(&event)//如果事件队列中存在事件，函数返回1，并且在类型为SDL_Event的结构体event中存入事件
-SDL_Event 
+SDL_Event !!等我学好结构体再更新吧
 
 
 
 
 
-
+SDL_FreeSurface()//释放掉之前创的SDL_Surface
 
 SDL_FillRect()//用来绘制矩形
-
+SDL_Rect
 
 
 SDL_GetTicks()//获得一个整数，表示程序开始到调用函数的时间
 
-
+IMG_Load()\\用来加载一个图像，参数为图片地址，返回值是一个SDL_Surface
+SDL_BlitSurface()\\将图像进行绘制
 
 }}}关于一些要用到的SDL2的API
