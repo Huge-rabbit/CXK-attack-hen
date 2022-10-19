@@ -23,15 +23,22 @@ int main(int argc,char *argv[])
     
     SDL_Surface * screen=SDL_GetWindowSurface(win);
 
-    while(1)
+    int goout = 1;
+    while(goout)
     {   
         SDL_Event event;
-        if(SDL_PollEvent(&event))
+        while(SDL_PollEvent(&event))
         {
-            if(event.type == SDL_QUIT)
+            switch (event.type)
             {
+            case SDL_QUIT:
+                goout = 0;
+                break;
+            
+            default:
                 break;
             }
+            
         }
 
         update();
@@ -51,7 +58,8 @@ int main(int argc,char *argv[])
 
 {{{关于一些要用到的SDL2的API(具体的使用方法去看SDL库好了,里面很详细)
 
-SDL_Init()//初始化用的函数，参数为SDL_INIT_VIDEO等等，若成功初始化，返回0（因为一堆东西要初始化的话，可以用SDL_INIT_EVERYTHING）
+SDL_Init()//初始化用的函数，参数为SDL_INIT_VIDEO等等，若成功初始化，返回0
+            （如果一堆东西要初始化的话，可以用SDL_INIT_EVERYTHING）
 SDL_Quit()//注销SDL2
 
 SDL_CreateWindow("title",
@@ -61,8 +69,22 @@ SDL_CreateWindow("title",
                 )
 SDL_DestroyWindow()//摧毁SDL_Window*的窗口
 
+SDL_CreateRenderer(window,index,flags)//创建渲染器了，window是SDL_Window,index填-1，flags有几个选项
+                                        ，SDL_RENDERER_ACCELERATED是硬件加速
+SDL_DestroyRenderer(renderer)//删除renderer
+
+SDL_RenderCopy(renderer,texture,srcrect,dstrect)//renderer是渲染器，texture是纹理，可以用SDL_Texture类型的指针,
+                                                screct是拷贝Texture的尺寸（用NULL）表示全部,dstrect表示渲染区域
+                                                ，用SDL_Rect表示
+SDL_RenderPresent(renderer);更新渲染器                               
+                        
+IMG_LoadTexture(renderrer,"Address")//返回一个SDL_Texture指针，Address是文件的路径
+                                        
+
 SDL_PollEvent(&event)//如果事件队列中存在事件，函数返回1，并且在类型为SDL_Event的结构体event中存入事件
 SDL_Event !!等我学好结构体再更新吧
+
+
 
 
 
