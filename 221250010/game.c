@@ -2,8 +2,8 @@
  * @Author: Huge-rabbit 1372223484@qq.com
  * @Date: 2022-10-15 10:36:22
  * @LastEditors: Huge-rabbit 1372223484@qq.com
- * @LastEditTime: 2022-10-22 13:54:50
- * @FilePath: \221250010\game.c
+ * @LastEditTime: 2022-10-22 14:14:40
+ * @FilePath: \PlaneWar-maind:\Teamwork\CXK-attack-hen\221250010\game.c
  * @Description: 
  * 
  * Copyright (c) 2022 by Huge-rabbit 1372223484@qq.com, All Rights Reserved. 
@@ -102,5 +102,6 @@ int main(int argc,char *argv[])
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(win);
     SDL_Quit();
+    
     return 0;
 }
