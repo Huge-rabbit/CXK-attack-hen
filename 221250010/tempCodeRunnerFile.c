@@ -1,1 +1,0 @@
-SDL_RenderCopy(renderer,img,NULL,&background);

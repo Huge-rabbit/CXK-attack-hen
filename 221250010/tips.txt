@@ -79,7 +79,7 @@ SDL_RenderCopy(renderer,texture,srcrect,dstrect)//rendererÊÇäÖÈ¾Æ÷£¬textureÊÇÎÆÀ
 SDL_RenderPresent(renderer);¸üĞÂäÖÈ¾Æ÷                               
                         
 IMG_LoadTexture(renderrer,"Address")//·µ»ØÒ»¸öSDL_TextureÖ¸Õë£¬AddressÊÇÎÄ¼şµÄÂ·¾¶
-                                        
+                    
 
 SDL_PollEvent(&event)//Èç¹ûÊÂ¼ş¶ÓÁĞÖĞ´æÔÚÊÂ¼ş£¬º¯Êı·µ»Ø1£¬²¢ÇÒÔÚÀàĞÍÎªSDL_EventµÄ½á¹¹ÌåeventÖĞ´æÈëÊÂ¼ş
 SDL_Event !!µÈÎÒÑ§ºÃ½á¹¹ÌåÔÙ¸üĞÂ°É
@@ -91,6 +91,7 @@ SDL_Event !!µÈÎÒÑ§ºÃ½á¹¹ÌåÔÙ¸üĞÂ°É
 
 
 SDL_FreeSurface()//ÊÍ·ÅµôÖ®Ç°´´µÄSDL_Surface
+SDL_DestroyTexture()//ÊÍ·ÅµôÖ®Ç°´´µÄSDL_Texture
 
 SDL_FillRect()//ÓÃÀ´»æÖÆ¾ØĞÎ
 SDL_Rect
