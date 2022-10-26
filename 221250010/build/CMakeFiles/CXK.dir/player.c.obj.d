@@ -152,4 +152,7 @@ CMakeFiles/CXK.dir/player.c.obj: \
  C:\SDL-mingw\include/SDL2/SDL_version.h \
  C:\SDL-mingw\include/SDL2/SDL_locale.h \
  C:\SDL-mingw\include/SDL2/SDL_misc.h \
- C:/mingw64/x86_64-w64-mingw32/include/math.h
+ C:/mingw64/x86_64-w64-mingw32/include/math.h \
+ D:\Teamwork\CXK-attack-hen\221250010\resource.h \
+ C:\SDL-mingw\include/SDL2/SDL_image.h C:\SDL-mingw\include/SDL2/SDL.h \
+ C:\SDL-mingw\include/SDL2/SDL_mixer.h

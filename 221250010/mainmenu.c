@@ -15,8 +15,8 @@ int EnterMainMenu(SDL_Renderer * renderer)
 {
     
     SDL_Rect menurect = {300,150,400,275};
-    Mix_Music * music = Mix_LoadMUS("materials/music/JustMimeticEnzyme.mp3");
-    Mix_PlayMusic(music,1);
+    //Mix_Music * music = Mix_LoadMUS("materials/music/JustMimeticEnzyme.mp3");
+    Mix_PlayMusic(chooseMusic(1),1);
     Mix_VolumeMusic(100);
     while(1)
     {

@@ -18,5 +18,10 @@
   "directory": "D:/Teamwork/CXK-attack-hen/221250010/build",
   "command": "C:\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\CXK.dir\\mainmenu.c.obj -c D:\\Teamwork\\CXK-attack-hen\\221250010\\mainmenu.c",
   "file": "D:/Teamwork/CXK-attack-hen/221250010/mainmenu.c"
+},
+{
+  "directory": "D:/Teamwork/CXK-attack-hen/221250010/build",
+  "command": "C:\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\CXK.dir\\enemy.c.obj -c D:\\Teamwork\\CXK-attack-hen\\221250010\\enemy.c",
+  "file": "D:/Teamwork/CXK-attack-hen/221250010/enemy.c"
 }
 ]

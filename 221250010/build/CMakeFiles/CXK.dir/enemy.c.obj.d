@@ -1,6 +1,6 @@
-CMakeFiles/CXK.dir/resource.c.obj: \
- D:\Teamwork\CXK-attack-hen\221250010\resource.c \
- D:\Teamwork\CXK-attack-hen\221250010\resource.h \
+CMakeFiles/CXK.dir/enemy.c.obj: \
+ D:\Teamwork\CXK-attack-hen\221250010\enemy.c \
+ D:\Teamwork\CXK-attack-hen\221250010\enemy.h \
  C:\SDL-mingw\include/SDL2/SDL.h C:\SDL-mingw\include/SDL2/SDL_main.h \
  C:\SDL-mingw\include/SDL2/SDL_stdinc.h \
  C:\SDL-mingw\include/SDL2/SDL_config.h \
@@ -151,6 +151,4 @@ CMakeFiles/CXK.dir/resource.c.obj: \
  C:\SDL-mingw\include/SDL2/SDL_timer.h \
  C:\SDL-mingw\include/SDL2/SDL_version.h \
  C:\SDL-mingw\include/SDL2/SDL_locale.h \
- C:\SDL-mingw\include/SDL2/SDL_misc.h \
- C:\SDL-mingw\include/SDL2/SDL_image.h C:\SDL-mingw\include/SDL2/SDL.h \
- C:\SDL-mingw\include/SDL2/SDL_mixer.h
+ C:\SDL-mingw\include/SDL2/SDL_misc.h

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/CXK.dir/enemy.c.obj"
+  "CMakeFiles/CXK.dir/enemy.c.obj.d"
   "CMakeFiles/CXK.dir/game.c.obj"
   "CMakeFiles/CXK.dir/game.c.obj.d"
   "CMakeFiles/CXK.dir/mainmenu.c.obj"

@@ -1,13 +1,3 @@
-/*
- * @Author: Huge-rabbit 1372223484@qq.com
- * @Date: 2022-10-15 10:36:22
- * @LastEditors: Huge-rabbit 1372223484@qq.com
- * @LastEditTime: 2022-10-26 12:54:08
- * @FilePath: \PlaneWar-maind:\Teamwork\CXK-attack-hen\221250010\game.c
- * @Description: 
- * 
- * Copyright (c) 2022 by Huge-rabbit 1372223484@qq.com, All Rights Reserved. 
- */
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_image.h>
 #include<SDL2/SDL_mixer.h>
@@ -16,6 +6,7 @@
 #include"player.h"
 #include"resource.h"
 #include"mainmenu.h"
+#include"enemy.h"
 
 #define HEIGHT 600
 #define WIDTH 1000
@@ -29,7 +20,7 @@ SDL_Renderer * renderer = NULL;
 //SDL_Texture * kun = NULL;
 
 CXK * myCXK = NULL;
-
+ENEMY * enemy1 = NULL;
 
 
 int main(int argc,char *argv[])
@@ -40,14 +31,7 @@ int main(int argc,char *argv[])
         return 1;
     }
 
-    //Mix_Init(MIX_INIT_MP3);
     Mix_OpenAudio(MIX_DEFAULT_FREQUENCY,MIX_DEFAULT_FORMAT,MIX_DEFAULT_CHANNELS,4096);
-    //Mix_Music * music = Mix_LoadMUS("materials/music/JustMimeticEnzyme.mp3");
-    //Mix_PlayMusic(music,1);
-
-
-
-
 
     win = SDL_CreateWindow("cxk",
                             SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
@@ -55,11 +39,15 @@ int main(int argc,char *argv[])
                             SDL_WINDOW_SHOWN);
     
     renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
-    
+    SDL_SetRenderDrawColor(renderer,255,0,0,255);
+
     LoadResource(renderer);
 
 
     myCXK = Creat_CXK(WIDTH / 2,HEIGHT / 2,50,61);
+    enemy1 = Creat_ENEMY(400,400,120,90);
+
+    
 
     int goout = 1;
     int mousex = 0;
@@ -111,11 +99,10 @@ int main(int argc,char *argv[])
         SDL_RenderClear(renderer);
         SDL_RenderCopy(renderer,chooseTexture(1),NULL,NULL);//»æÖÆ±³¾°
 
-        CXK_Move(myCXK,mousex,mousey);
-        SDL_RenderCopy(renderer,chooseTexture(2),NULL,&myCXK->rect);
+        CXK_Update(renderer,myCXK,mousex,mousey);
+        EnemyMove(renderer,enemy1);
         
         SDL_RenderPresent(renderer);
-        //SDL_UpdateWindowSurface(win);
         SDL_Delay(20);
     }
 

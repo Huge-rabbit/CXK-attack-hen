@@ -128,6 +128,30 @@ CXK/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/build
 .PHONY : CXK/fast
 
+enemy.obj: enemy.c.obj
+.PHONY : enemy.obj
+
+# target to build an object file
+enemy.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/enemy.c.obj
+.PHONY : enemy.c.obj
+
+enemy.i: enemy.c.i
+.PHONY : enemy.i
+
+# target to preprocess a source file
+enemy.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/enemy.c.i
+.PHONY : enemy.c.i
+
+enemy.s: enemy.c.s
+.PHONY : enemy.s
+
+# target to generate assembly for a file
+enemy.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/enemy.c.s
+.PHONY : enemy.c.s
+
 game.obj: game.c.obj
 .PHONY : game.obj
 
@@ -233,6 +257,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CXK
+	@echo ... enemy.obj
+	@echo ... enemy.i
+	@echo ... enemy.s
 	@echo ... game.obj
 	@echo ... game.i
 	@echo ... game.s
