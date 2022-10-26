@@ -1,15 +1,15 @@
-//ä»¥ä¸‹ä¸ºé¡¹ç›®çš„å„ç§tips
+//ÒÔÏÂÎªÏîÄ¿µÄ¸÷ÖÖtips
 
-********************åˆ†å‰²çº?*********************************************************************************************
+********************·Ö¸î??*********************************************************************************************
 
-{{{æœ€åŸºæœ¬æ¡†æž¶(åˆ«ç›´æŽ¥æŠ„ï¼Œä»”ç»†çœ‹çœ‹å„ä¸ªä»£ç çš„ä½œç”¨)
+{{{×î»ù±¾¿ò¼Ü(±ðÖ±½Ó³­£¬×ÐÏ¸¿´¿´¸÷¸ö´úÂëµÄ×÷ÓÃ)
 
 
 
 void update();
 int main(int argc,char *argv[])
 {
-    //åˆå§‹åŒ?
+    //³õÊ¼??
     if(SDL_Init(SDL_INIT_VIDEO))
     {
         SDL_Log("Can not init video,%s",SDL_GetError);
@@ -51,38 +51,38 @@ int main(int argc,char *argv[])
     return 0;
 }
 
-}}}æœ€åŸºæœ¬æ¡†æž¶
+}}}×î»ù±¾¿ò¼Ü
 
-**************************åˆ†å‰²çº?********************************************************************************************************
+**************************·Ö¸î??********************************************************************************************************
 
 
-{{{å…³äºŽä¸€äº›è¦ç”¨åˆ°çš„SDL2çš„API(å…·ä½“çš„ä½¿ç”¨æ–¹æ³•åŽ»çœ‹SDLåº“å¥½äº?,é‡Œé¢å¾ˆè¯¦ç»?)
+{{{¹ØÓÚÒ»Ð©ÒªÓÃµ½µÄSDL2µÄAPI(¾ßÌåµÄÊ¹ÓÃ·½·¨È¥¿´SDL¿âºÃ??,ÀïÃæºÜÏê??)
 
-SDL_Init()//åˆå§‹åŒ–ç”¨çš„å‡½æ•°ï¼Œå‚æ•°ä¸ºSDL_INIT_VIDEOç­‰ç­‰ï¼Œè‹¥æˆåŠŸåˆå§‹åŒ–ï¼Œè¿”å›ž0
-            ï¼ˆå¦‚æžœä¸€å †ä¸œè¥¿è¦åˆå§‹åŒ–çš„è¯ï¼Œå¯ä»¥ç”¨SDL_INIT_EVERYTHINGï¼?
-SDL_Quit()//æ³¨é”€SDL2
+SDL_Init()//³õÊ¼»¯ÓÃµÄº¯Êý£¬²ÎÊýÎªSDL_INIT_VIDEOµÈµÈ£¬Èô³É¹¦³õÊ¼»¯£¬·µ»Ø0
+            £¨Èç¹ûÒ»¶Ñ¶«Î÷Òª³õÊ¼»¯µÄ»°£¬¿ÉÒÔÓÃSDL_INIT_EVERYTHING??
+SDL_Quit()//×¢ÏúSDL2
 
 SDL_CreateWindow("title",
-                x,y,//å¯¹åº”ç€çª—å£çš„ä½ç½®ï¼Œå¡«å…¥SDL_WINDOWPOS_CENTEREDä»£è¡¨ç€å®ƒåœ¨ä¸­é—´
-                w,h,//ä»£è¡¨å®½åº¦å’Œé«˜åº?
-                flags//å¯¹åº”çª—å£æ“ä½œï¼Œå¡«å…?0å°±æ˜¯ä¸æ“ä½œï¼Œå¡«å…¥å…¶å®ƒçš„SDL_WindowFlagså¯¹åº”å…¶å®ƒæ“ä½œ
+                x,y,//¶ÔÓ¦×Å´°¿ÚµÄÎ»ÖÃ£¬ÌîÈëSDL_WINDOWPOS_CENTERED´ú±í×ÅËüÔÚÖÐ¼ä
+                w,h,//´ú±í¿í¶ÈºÍ¸ß??
+                flags//¶ÔÓ¦´°¿Ú²Ù×÷£¬Ìî??0¾ÍÊÇ²»²Ù×÷£¬ÌîÈëÆäËüµÄSDL_WindowFlags¶ÔÓ¦ÆäËü²Ù×÷
                 )
-SDL_DestroyWindow()//æ‘§æ¯SDL_Window*çš„çª—å?
+SDL_DestroyWindow()//´Ý»ÙSDL_Window*µÄ´°??
 
-SDL_CreateRenderer(window,index,flags)//åˆ›å»ºæ¸²æŸ“å™¨äº†ï¼Œwindowæ˜¯SDL_Window,indexå¡?-1ï¼Œflagsæœ‰å‡ ä¸ªé€‰é¡¹
-                                        ï¼ŒSDL_RENDERER_ACCELERATEDæ˜¯ç¡¬ä»¶åŠ é€?
-SDL_DestroyRenderer(renderer)//åˆ é™¤renderer
+SDL_CreateRenderer(window,index,flags)//´´½¨äÖÈ¾Æ÷ÁË£¬windowÊÇSDL_Window,index??-1£¬flagsÓÐ¼¸¸öÑ¡Ïî
+                                        £¬SDL_RENDERER_ACCELERATEDÊÇÓ²¼þ¼Ó??
+SDL_DestroyRenderer(renderer)//É¾³ýrenderer
 
-SDL_RenderCopy(renderer,texture,srcrect,dstrect)//rendereræ˜¯æ¸²æŸ“å™¨ï¼Œtextureæ˜¯çº¹ç†ï¼Œå¯ä»¥ç”¨SDL_Textureç±»åž‹çš„æŒ‡é’?,
-                                                screctæ˜¯æ‹·è´Textureçš„å°ºå¯¸ï¼ˆç”¨NULLï¼‰è¡¨ç¤ºå…¨éƒ?,dstrectè¡¨ç¤ºæ¸²æŸ“åŒºåŸŸ
-                                                ï¼Œç”¨SDL_Rectè¡¨ç¤º
-SDL_RenderPresent(renderer);æ›´æ–°æ¸²æŸ“å™?                               
+SDL_RenderCopy(renderer,texture,srcrect,dstrect)//rendererÊÇäÖÈ¾Æ÷£¬textureÊÇÎÆÀí£¬¿ÉÒÔÓÃSDL_TextureÀàÐÍµÄÖ¸??,
+                                                screctÊÇ¿½±´TextureµÄ³ß´ç£¨ÓÃNULL£©±íÊ¾È«??,dstrect±íÊ¾äÖÈ¾ÇøÓò
+                                                £¬ÓÃSDL_Rect±íÊ¾
+SDL_RenderPresent(renderer);¸üÐÂäÖÈ¾??                               
                         
-IMG_LoadTexture(renderrer,"Address")//·µ»ØÒ»¸öSDL_TextureÖ¸Õë£¬AddressÊÇÎÄ¼þµÄÂ·¾¶
+IMG_LoadTexture(renderrer,"Address")//???????SDL_Texture???Address???????¡¤??
                                         
 
-SDL_PollEvent(&event)//å¦‚æžœäº‹ä»¶é˜Ÿåˆ—ä¸­å­˜åœ¨äº‹ä»¶ï¼Œå‡½æ•°è¿”å›ž1ï¼Œå¹¶ä¸”åœ¨ç±»åž‹ä¸ºSDL_Eventçš„ç»“æž„ä½“eventä¸­å­˜å…¥äº‹ä»?
-SDL_Event !!ç­‰æˆ‘å­¦å¥½ç»“æž„ä½“å†æ›´æ–°å?
+SDL_PollEvent(&event)//Èç¹ûÊÂ¼þ¶ÓÁÐÖÐ´æÔÚÊÂ¼þ£¬º¯Êý·µ»Ø1£¬²¢ÇÒÔÚÀàÐÍÎªSDL_EventµÄ½á¹¹ÌåeventÖÐ´æÈëÊÂ??
+SDL_Event !!µÈÎÒÑ§ºÃ½á¹¹ÌåÔÙ¸üÐÂ??
 
 
 
@@ -90,15 +90,15 @@ SDL_Event !!ç­‰æˆ‘å­¦å¥½ç»“æž„ä½“å†æ›´æ–°å?
 
 
 
-SDL_FreeSurface()//ÊÍ·ÅµôÖ®Ç°´´µÄSDL_Surface
+SDL_FreeSurface()//??????????SDL_Surface
 
-SDL_FillRect()//ç”¨æ¥ç»˜åˆ¶çŸ©å½¢
+SDL_FillRect()//ÓÃÀ´»æÖÆ¾ØÐÎ
 SDL_Rect
 
 
-SDL_GetTicks()//èŽ·å¾—ä¸€ä¸ªæ•´æ•°ï¼Œè¡¨ç¤ºç¨‹åºå¼€å§‹åˆ°è°ƒç”¨å‡½æ•°çš„æ—¶é—?
+SDL_GetTicks()//»ñµÃÒ»¸öÕûÊý£¬±íÊ¾³ÌÐò¿ªÊ¼µ½µ÷ÓÃº¯ÊýµÄÊ±??
 
-IMG_Load()\\ç”¨æ¥åŠ è½½ä¸€ä¸ªå›¾åƒï¼Œå‚æ•°ä¸ºå›¾ç‰‡åœ°å€ï¼Œè¿”å›žå€¼æ˜¯ä¸€ä¸ªSDL_Surface
-SDL_BlitSurface()\\å°†å›¾åƒè¿›è¡Œç»˜åˆ?
+IMG_Load()\\ÓÃÀ´¼ÓÔØÒ»¸öÍ¼Ïñ£¬²ÎÊýÎªÍ¼Æ¬µØÖ·£¬·µ»ØÖµÊÇÒ»¸öSDL_Surface
+SDL_BlitSurface()\\½«Í¼Ïñ½øÐÐ»æ??
 
-}}}å…³äºŽä¸€äº›è¦ç”¨åˆ°çš„SDL2çš„API
+}}}¹ØÓÚÒ»Ð©ÒªÓÃµ½µÄSDL2µÄAPI
