@@ -2,7 +2,7 @@
  * @Author: Huge-rabbit 1372223484@qq.com
  * @Date: 2022-10-15 10:36:22
  * @LastEditors: Huge-rabbit 1372223484@qq.com
- * @LastEditTime: 2022-10-25 22:09:18
+ * @LastEditTime: 2022-10-26 12:54:08
  * @FilePath: \PlaneWar-maind:\Teamwork\CXK-attack-hen\221250010\game.c
  * @Description: 
  * 
@@ -10,6 +10,7 @@
  */
 #include<SDL2/SDL.h>
 #include<SDL2/SDL_image.h>
+#include<SDL2/SDL_mixer.h>
 #include<stdio.h>
 
 #include"player.h"
@@ -33,11 +34,20 @@ CXK * myCXK = NULL;
 
 int main(int argc,char *argv[])
 {
-    if(SDL_Init(SDL_INIT_VIDEO))
+    if(SDL_Init(SDL_INIT_EVERYTHING))
     {
-        SDL_Log("Can not init video,%s",SDL_GetError);
+        SDL_Log("Can not init SDL_INIT_EVERYTHING,%s",SDL_GetError);
         return 1;
     }
+
+    //Mix_Init(MIX_INIT_MP3);
+    Mix_OpenAudio(MIX_DEFAULT_FREQUENCY,MIX_DEFAULT_FORMAT,MIX_DEFAULT_CHANNELS,4096);
+    //Mix_Music * music = Mix_LoadMUS("materials/music/JustMimeticEnzyme.mp3");
+    //Mix_PlayMusic(music,1);
+
+
+
+
 
     win = SDL_CreateWindow("cxk",
                             SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
@@ -112,6 +122,8 @@ int main(int argc,char *argv[])
 
     DestroyResource();
 
+    Mix_CloseAudio();
+    Mix_Quit();
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(win);
     SDL_Quit();

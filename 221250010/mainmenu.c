@@ -2,7 +2,7 @@
  * @Author: Huge-rabbit 1372223484@qq.com
  * @Date: 2022-10-25 21:23:22
  * @LastEditors: Huge-rabbit 1372223484@qq.com
- * @LastEditTime: 2022-10-25 22:25:07
+ * @LastEditTime: 2022-10-26 13:06:02
  * @FilePath: \PlaneWar-maind:\Teamwork\CXK-attack-hen\221250010\mainMenu.c
  * @Description: 
  * 
@@ -13,7 +13,11 @@
 
 int EnterMainMenu(SDL_Renderer * renderer)
 {
+    
     SDL_Rect menurect = {300,150,400,275};
+    Mix_Music * music = Mix_LoadMUS("materials/music/JustMimeticEnzyme.mp3");
+    Mix_PlayMusic(music,1);
+    Mix_VolumeMusic(100);
     while(1)
     {
         SDL_Event event;
@@ -27,6 +31,7 @@ int EnterMainMenu(SDL_Renderer * renderer)
                 switch (event.key.keysym.sym)
                 {
                 case SDLK_m:
+                    Mix_VolumeMusic(0);
                     return 0;
                     break;
                 default:

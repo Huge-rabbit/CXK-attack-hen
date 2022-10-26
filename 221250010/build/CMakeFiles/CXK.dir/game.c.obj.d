@@ -152,6 +152,7 @@ CMakeFiles/CXK.dir/game.c.obj: \
  C:\SDL-mingw\include/SDL2/SDL_locale.h \
  C:\SDL-mingw\include/SDL2/SDL_misc.h \
  C:\SDL-mingw\include/SDL2/SDL_image.h C:\SDL-mingw\include/SDL2/SDL.h \
+ C:\SDL-mingw\include/SDL2/SDL_mixer.h \
  C:/mingw64/x86_64-w64-mingw32/include/stdio.h \
  C:/mingw64/x86_64-w64-mingw32/include/_mingw_print_push.h \
  C:/mingw64/x86_64-w64-mingw32/include/swprintf.inl \

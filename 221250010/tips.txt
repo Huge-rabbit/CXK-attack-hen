@@ -10,9 +10,9 @@ void update();
 int main(int argc,char *argv[])
 {
     //初始??
-    if(SDL_Init(SDL_INIT_VIDEO))
+    if(SDL_Init(SDL_INIT_EVERYTHING))
     {
-        SDL_Log("Can not init video,%s",SDL_GetError);
+        SDL_Log("Can not init SDL_INIT_EVERYTHING,%s",SDL_GetError);
         return 1;
     }
 
@@ -59,15 +59,15 @@ int main(int argc,char *argv[])
 {{{关于一些要用到的SDL2的API(具体的使用方法去看SDL库好??,里面很详??)
 
 SDL_Init()//初始化用的函数，参数为SDL_INIT_VIDEO等等，若成功初始化，返回0
-            （如果一堆东西要初始化的话，可以用SDL_INIT_EVERYTHING??
+            (如果一堆东西要初始化的话，可以用SDL_INIT_EVERYTHING)
 SDL_Quit()//注销SDL2
 
 SDL_CreateWindow("title",
                 x,y,//对应着窗口的位置，填入SDL_WINDOWPOS_CENTERED代表着它在中间
-                w,h,//代表宽度和高??
-                flags//对应窗口操作，填??0就是不操作，填入其它的SDL_WindowFlags对应其它操作
+                w,h,//代表宽度和高度
+                flags//对应窗口操作，填入0就是不操作，填入其它的SDL_WindowFlags对应其它操作
                 )
-SDL_DestroyWindow()//摧毁SDL_Window*的窗??
+SDL_DestroyWindow()//摧毁SDL_Window*的窗口
 
 SDL_CreateRenderer(window,index,flags)//创建渲染器了，window是SDL_Window,index??-1，flags有几个选项
                                         ，SDL_RENDERER_ACCELERATED是硬件加??
@@ -99,6 +99,24 @@ SDL_Rect
 SDL_GetTicks()//获得一个整数，表示程序开始到调用函数的时??
 
 IMG_Load()\\用来加载一个图像，参数为图片地址，返回值是一个SDL_Surface
-SDL_BlitSurface()\\将图像进行绘??
+SDL_BlitSurface()\\将图像进行绘制
+
+
+Mix_Init(MIX_INIT_MP3);//初始化音乐格式(其实不用也行，因为下面的Mix_OpenAudio会对该函数进行调用)
+Mix_Quit();
+Mix_OpenAudio(MIX_DEFAULT_FREQUENCY,MIX_DEFAULT_FORMAT,MIX_DEFAULT_CHANNELS,4096);//打开音乐播放器
+Mix_CloseAudio();
+
+
+Mix_Music * //较长的声音片段，如BGM
+Mix_Chunk * //较短的声音片段
+
+Mix_LoadMUS("Address")//加载音乐到Mix_Music* 的变量上
+Mix_LoadWAV("Address")//虽然有wav，但也可以加载MP3，ogg类型的音乐
+
+Mix_PlayMusic(music,1);播放一次音乐，music为Mix_Music * ，把1改成-1就循环播放，音乐一次只能同时放一首
+
+
+
 
 }}}关于一些要用到的SDL2的API

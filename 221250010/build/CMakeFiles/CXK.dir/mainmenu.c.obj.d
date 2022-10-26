@@ -153,4 +153,5 @@ CMakeFiles/CXK.dir/mainmenu.c.obj: \
  C:\SDL-mingw\include/SDL2/SDL_locale.h \
  C:\SDL-mingw\include/SDL2/SDL_misc.h \
  C:\SDL-mingw\include/SDL2/SDL_image.h C:\SDL-mingw\include/SDL2/SDL.h \
+ C:\SDL-mingw\include/SDL2/SDL_mixer.h \
  D:\Teamwork\CXK-attack-hen\221250010\resource.h

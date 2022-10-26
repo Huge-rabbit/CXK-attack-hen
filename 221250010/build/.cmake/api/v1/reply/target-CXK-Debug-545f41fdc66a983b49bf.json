@@ -60,6 +60,12 @@
 				"file" : 0,
 				"line" : 11,
 				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
 			}
 		]
 	},
@@ -118,6 +124,11 @@
 			{
 				"backtrace" : 6,
 				"fragment" : "-lSDL2_ttf",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "-lSDL2_mixer",
 				"role" : "libraries"
 			},
 			{
