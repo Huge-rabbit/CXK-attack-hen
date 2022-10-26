@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CXK.dir/game.c.obj"
   "CMakeFiles/CXK.dir/game.c.obj.d"
+  "CMakeFiles/CXK.dir/mainmenu.c.obj"
+  "CMakeFiles/CXK.dir/mainmenu.c.obj.d"
   "CMakeFiles/CXK.dir/player.c.obj"
   "CMakeFiles/CXK.dir/player.c.obj.d"
+  "CMakeFiles/CXK.dir/resource.c.obj"
+  "CMakeFiles/CXK.dir/resource.c.obj.d"
   "CXK.exe"
   "CXK.exe.manifest"
   "CXK.pdb"

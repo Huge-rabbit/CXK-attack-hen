@@ -152,6 +152,30 @@ game.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/game.c.s
 .PHONY : game.c.s
 
+mainmenu.obj: mainmenu.c.obj
+.PHONY : mainmenu.obj
+
+# target to build an object file
+mainmenu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/mainmenu.c.obj
+.PHONY : mainmenu.c.obj
+
+mainmenu.i: mainmenu.c.i
+.PHONY : mainmenu.i
+
+# target to preprocess a source file
+mainmenu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/mainmenu.c.i
+.PHONY : mainmenu.c.i
+
+mainmenu.s: mainmenu.c.s
+.PHONY : mainmenu.s
+
+# target to generate assembly for a file
+mainmenu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/mainmenu.c.s
+.PHONY : mainmenu.c.s
+
 player.obj: player.c.obj
 .PHONY : player.obj
 
@@ -176,6 +200,30 @@ player.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/player.c.s
 .PHONY : player.c.s
 
+resource.obj: resource.c.obj
+.PHONY : resource.obj
+
+# target to build an object file
+resource.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/resource.c.obj
+.PHONY : resource.c.obj
+
+resource.i: resource.c.i
+.PHONY : resource.i
+
+# target to preprocess a source file
+resource.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/resource.c.i
+.PHONY : resource.c.i
+
+resource.s: resource.c.s
+.PHONY : resource.s
+
+# target to generate assembly for a file
+resource.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CXK.dir\build.make CMakeFiles/CXK.dir/resource.c.s
+.PHONY : resource.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -188,9 +236,15 @@ help:
 	@echo ... game.obj
 	@echo ... game.i
 	@echo ... game.s
+	@echo ... mainmenu.obj
+	@echo ... mainmenu.i
+	@echo ... mainmenu.s
 	@echo ... player.obj
 	@echo ... player.i
 	@echo ... player.s
+	@echo ... resource.obj
+	@echo ... resource.i
+	@echo ... resource.s
 .PHONY : help
 
 

@@ -8,5 +8,15 @@
   "directory": "D:/Teamwork/CXK-attack-hen/221250010/build",
   "command": "C:\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\CXK.dir\\player.c.obj -c D:\\Teamwork\\CXK-attack-hen\\221250010\\player.c",
   "file": "D:/Teamwork/CXK-attack-hen/221250010/player.c"
+},
+{
+  "directory": "D:/Teamwork/CXK-attack-hen/221250010/build",
+  "command": "C:\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\CXK.dir\\resource.c.obj -c D:\\Teamwork\\CXK-attack-hen\\221250010\\resource.c",
+  "file": "D:/Teamwork/CXK-attack-hen/221250010/resource.c"
+},
+{
+  "directory": "D:/Teamwork/CXK-attack-hen/221250010/build",
+  "command": "C:\\mingw64\\bin\\gcc.exe   -g -o CMakeFiles\\CXK.dir\\mainmenu.c.obj -c D:\\Teamwork\\CXK-attack-hen\\221250010\\mainmenu.c",
+  "file": "D:/Teamwork/CXK-attack-hen/221250010/mainmenu.c"
 }
 ]

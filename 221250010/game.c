@@ -2,7 +2,7 @@
  * @Author: Huge-rabbit 1372223484@qq.com
  * @Date: 2022-10-15 10:36:22
  * @LastEditors: Huge-rabbit 1372223484@qq.com
- * @LastEditTime: 2022-10-22 14:14:40
+ * @LastEditTime: 2022-10-25 22:09:18
  * @FilePath: \PlaneWar-maind:\Teamwork\CXK-attack-hen\221250010\game.c
  * @Description: 
  * 
@@ -13,16 +13,19 @@
 #include<stdio.h>
 
 #include"player.h"
+#include"resource.h"
+#include"mainmenu.h"
 
 #define HEIGHT 600
 #define WIDTH 1000
 
 
+
 SDL_Window * win = NULL;
 SDL_Renderer * renderer = NULL;
 
-SDL_Texture * img = NULL;
-SDL_Texture * kun = NULL;
+//SDL_Texture * BackgroundImage = NULL;
+//SDL_Texture * kun = NULL;
 
 CXK * myCXK = NULL;
 
@@ -43,13 +46,14 @@ int main(int argc,char *argv[])
     
     renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
     
-    img = IMG_LoadTexture(renderer,"materials/image/background1.png");
-    kun = IMG_LoadTexture(renderer,"materials/image/cxk1.png");
+    LoadResource(renderer);
 
 
     myCXK = Creat_CXK(WIDTH / 2,HEIGHT / 2,50,61);
 
     int goout = 1;
+    int mousex = 0;
+    int mousey = 0;
     while(goout)
     {   
         SDL_Event event;
@@ -60,19 +64,27 @@ int main(int argc,char *argv[])
             case SDL_QUIT:
                 goout = 0;
                 break;
+            case SDL_MOUSEMOTION:
+                mousex = event.motion.x;
+                mousey = event.motion.y;
+                
+                break;
             case SDL_KEYDOWN:
                 switch (event.key.keysym.sym)
                 {
-                case SDLK_UP:
+                case SDLK_m:
+                    EnterMainMenu(renderer);
+                    break;
+                case SDLK_w:
                     myCXK->rect.y-=5;
                     break;
-                case SDLK_LEFT:
+                case SDLK_a:
                     myCXK->rect.x-=5;
                     break;
-                case SDLK_RIGHT:
+                case SDLK_d:
                     myCXK->rect.x+=5;
                     break;
-                case SDLK_DOWN:
+                case SDLK_s:
                     myCXK->rect.y+=5;
                     break;
                 default:
@@ -87,18 +99,19 @@ int main(int argc,char *argv[])
             
         }
         SDL_RenderClear(renderer);
-        SDL_RenderCopy(renderer,img,NULL,NULL);//»æÖÆ±³¾°
+        SDL_RenderCopy(renderer,chooseTexture(1),NULL,NULL);//»æÖÆ±³¾°
 
-        
-        SDL_RenderCopy(renderer,kun,NULL,&myCXK->rect);
+        CXK_Move(myCXK,mousex,mousey);
+        SDL_RenderCopy(renderer,chooseTexture(2),NULL,&myCXK->rect);
         
         SDL_RenderPresent(renderer);
         //SDL_UpdateWindowSurface(win);
         SDL_Delay(20);
     }
 
-    SDL_DestroyTexture(img);
-    SDL_DestroyTexture(kun);
+
+    DestroyResource();
+
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(win);
     SDL_Quit();

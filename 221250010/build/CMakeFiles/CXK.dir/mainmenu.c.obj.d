@@ -1,6 +1,6 @@
-CMakeFiles/CXK.dir/player.c.obj: \
- D:\Teamwork\CXK-attack-hen\221250010\player.c \
- D:\Teamwork\CXK-attack-hen\221250010\player.h \
+CMakeFiles/CXK.dir/mainmenu.c.obj: \
+ D:\Teamwork\CXK-attack-hen\221250010\mainmenu.c \
+ D:\Teamwork\CXK-attack-hen\221250010\mainmenu.h \
  C:\SDL-mingw\include/SDL2/SDL.h C:\SDL-mingw\include/SDL2/SDL_main.h \
  C:\SDL-mingw\include/SDL2/SDL_stdinc.h \
  C:\SDL-mingw\include/SDL2/SDL_config.h \
@@ -152,4 +152,5 @@ CMakeFiles/CXK.dir/player.c.obj: \
  C:\SDL-mingw\include/SDL2/SDL_version.h \
  C:\SDL-mingw\include/SDL2/SDL_locale.h \
  C:\SDL-mingw\include/SDL2/SDL_misc.h \
- C:/mingw64/x86_64-w64-mingw32/include/math.h
+ C:\SDL-mingw\include/SDL2/SDL_image.h C:\SDL-mingw\include/SDL2/SDL.h \
+ D:\Teamwork\CXK-attack-hen\221250010\resource.h
